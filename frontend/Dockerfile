@@ -7,7 +7,7 @@ COPY . .
 RUN npm run build
 
 # STAGE 2: Serve static files using Nginx as non-root user
-FROM nginx:1.27-alpine AS final
+FROM nginx:1.30.5-alpine3.24-slim AS final
 
 # Copy built static files and custom Nginx config
 COPY --from=builder /app/dist /usr/share/nginx/html

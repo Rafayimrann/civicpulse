@@ -1,8 +1,6 @@
 # CivicPulse
 
-Municipal complaint intake and triage platform. This repository contains the
-**application and test layers only** (backend, frontend, tests) — no
-Dockerfiles, Kubernetes manifests, or CI/CD pipelines, per scope.
+Municipal complaint intake, triage, and operations platform. The repository includes the backend, frontend, tests, Docker Compose configuration, Kubernetes manifests, and GitHub Actions CI pipeline.
 
 ## Layout
 

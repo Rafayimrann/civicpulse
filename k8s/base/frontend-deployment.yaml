@@ -27,7 +27,7 @@ spec:
 
       containers:
         - name: frontend
-          image: civicpulse-frontend:latest
+          image: civicpulse-frontend:0.1.0
           imagePullPolicy: IfNotPresent
 
           ports:

@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "CivicPulse municipal complaint intake and triage platform"
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "fastapi==0.115.0",
+    "fastapi==0.141.1",
+    "starlette==1.7.0",
     "uvicorn[standard]==0.30.6",
     "pydantic==2.9.2",
     "pydantic-settings==2.5.2",
@@ -16,7 +17,7 @@ dependencies = [
     "httpx==0.27.2",
     "python-json-logger==2.0.7",
     "prometheus-client==0.20.0",
-    "python-multipart==0.0.9",
+    "python-multipart==0.0.32",
 ]
 
 [project.optional-dependencies]
