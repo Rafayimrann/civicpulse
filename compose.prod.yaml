@@ -42,7 +42,7 @@ services:
     restart: unless-stopped
 
   backend:
-    image: ghcr.io/${GITHUB_REPOSITORY}/backend:${IMAGE_TAG:-latest}
+    image: ghcr.io/${GITHUB_REPOSITORY}/backend:${IMAGE_TAG}
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       REDIS_URL: redis://redis:6379/0
@@ -59,7 +59,7 @@ services:
     restart: unless-stopped
 
   frontend:
-    image: ghcr.io/${GITHUB_REPOSITORY}/frontend:${IMAGE_TAG:-latest}
+    image: ghcr.io/${GITHUB_REPOSITORY}/frontend:${IMAGE_TAG}
     ports:
       - "80:8080"
     networks:
