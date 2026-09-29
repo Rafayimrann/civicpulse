@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+header nav button {
+  margin-right: 0.5rem;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.field-error,
+.server-error {
+  color: #b00020;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0;
+}
+
+.triage-result dt {
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cache-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.cache-hit {
+  background: #d4edda;
+}
+
+.cache-miss {
+  background: #fff3cd;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.error-boundary {
+  padding: 1rem;
+  border: 1px solid #b00020;
+  border-radius: 4px;
+}
