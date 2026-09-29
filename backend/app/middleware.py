@@ -35,7 +35,8 @@ class RequestContextMiddleware(BaseHTTPMiddleware):
             request_id_ctx.reset(token)
 
         duration = time.perf_counter() - start
-        route_path = request.scope.get("route").path if request.scope.get("route") else request.url.path
+        route = request.scope.get("route")
+        route_path = getattr(route, "path", request.url.path)
 
         REQUEST_COUNT.labels(method=request.method, path=route_path, status_code=response.status_code).inc()
         REQUEST_LATENCY.labels(method=request.method, path=route_path).observe(duration)
